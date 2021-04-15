@@ -1,4 +1,4 @@
-import {BrowserRouter as Route, Switch, Route, Redirect, Router} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 
 import Navigation from './components/Navigation';
 import './styles/base/style.scss';
