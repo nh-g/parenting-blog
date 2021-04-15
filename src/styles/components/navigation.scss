@@ -22,5 +22,19 @@
         display: flex;
         list-style-type: none;
         margin-right: 20px;
+        align-items: center; //center nav link titles to center of nav container
+    }
+
+    a {
+        text-decoration: none; //remove underline of links
+        padding: 0 20px 0 20px; //align nav link titles evenly spaced by 20px between
+        font-size: $size-text-medium;
+        font-weight: 400;
+        color: $color-text-black;        
+
+        &:hover{
+            color: $color-text-blue;
+
+        }
     }
 }
