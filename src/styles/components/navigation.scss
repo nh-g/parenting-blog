@@ -1,0 +1,26 @@
+.site-navigation {
+    height: 65px;
+    width: 100%;
+    background:white;
+    display: flex;
+    justify-content: space-between;
+    color: $color-text-black;
+
+    span {
+        font-size: $size-text-big;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    ul {    
+        height: 100%;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+        display: flex;
+        list-style-type: none;
+        margin-right: 20px;
+    }
+}
