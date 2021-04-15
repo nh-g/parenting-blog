@@ -1,8 +1,14 @@
+import {BrowserRouter as Route, Switch, Route, Redirect, Router} from 'react-router-dom';
+
+import Navigation from './components/Navigation';
+import './styles/base/style.scss';
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <Router>
+      <div className="App">
+        <Navigation />
+      </div>
+    </Router>
   );
 }
 
