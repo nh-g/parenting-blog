@@ -1,9 +1,6 @@
 import {Link} from 'react-router-dom';
 import {useState} from 'react';
 
-// import { MenuOutline } from "react-ionicons";
-
-
 const navLinks = [
   {
     title: "Home",
@@ -27,7 +24,7 @@ export default function Navigation(){
 
     return (
       <nav
-        className={`site-navigation ${menuActive && "active"}`}
+        className={`site-navigation ${menuActive && 'active'}`}
         role="navigation"
       >
         <span className="menu-title">Xin chào Mũi Tẹt</span>
