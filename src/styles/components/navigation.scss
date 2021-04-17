@@ -1,20 +1,49 @@
 .site-navigation {
     height: 65px;
     width: 100%;
-    background:white;
+    background: white;
     display: flex;
     justify-content: space-between;
     color: $color-text-black;
+    position: fixed;
+    z-index: 100;
+    top: 0;
 
-    span {
+    .menu-bar {
+        font-size: 20px;
+        width: 50px;
+        align-items: center;
+        cursor: pointer; //when mouse then become a pointer to indicate the link
+        display: none;
+    }
+
+    .menu-title {
         font-size: $size-text-big;
         font-weight: 400;
+        height: 100%;
         display: flex;
         align-items: center;
         margin-left: 30px;
     }
 
-    ul {    
+
+    .menu-content-container {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+
+        .menu-avatar-container {
+            background-color: $color-primary;
+            border: 1px solid $color-border;
+        }
+
+        .menu-avatar-name {
+            font-size: $size-text-small;
+            margin-left: 15px;
+        }
+    }
+
+    ul {
         height: 100%;
         margin-block-start: 0;
         margin-block-end: 0;
@@ -23,18 +52,67 @@
         list-style-type: none;
         margin-right: 20px;
         align-items: center; //center nav link titles to center of nav container
-    }
 
-    a {
-        text-decoration: none; //remove underline of links
-        padding: 0 20px 0 20px; //align nav link titles evenly spaced by 20px between
-        font-size: $size-text-medium;
-        font-weight: 400;
-        color: $color-text-black;        
+        a {
+            text-decoration: none; //remove underline of links
+            padding: 0 20px 0 20px; //align nav link titles evenly spaced by 20px between
+            font-size: $size-text-medium;
+            font-weight: 400;
+            color: $color-text-black;
 
-        &:hover{
-            color: $color-text-blue;
-
+            &:hover {
+                color: $color-text-blue;
+            }
         }
     }
+}
+
+@media screen and (max-width:$media-larger-tablet) {
+    .site-navigation {
+        .menu-content-container {
+           width: 300px;
+            height: calc(100% - 65px);
+            background: white;
+            position: fixed;
+            top: 65px;
+            transition: 300ms ease left;
+            flex-direction: column;
+
+
+            ul {
+                flex-direction: column;
+                justify-content: flex-start;
+                color: red;
+
+                li {
+                    text-align: left;
+                    height: 65px;
+                    display: flex;
+                    align-items: center;
+                }
+                a {
+                    padding: 20px 15px;
+                    width: 100%;
+                }
+            }
+             ul, li, .menu-avatar-container {
+                width: 100%;
+            }
+            .menu-avatar-container{
+                align-self: flex-start;
+                margin-left: 30px;
+            }
+
+
+        }
+
+        &.active {
+            left: 0px;
+        }
+
+        .menu-bar {
+            display: flex;
+        }
+    }
+
 }

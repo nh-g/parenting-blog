@@ -1,33 +1,57 @@
 import {Link} from 'react-router-dom';
+import {useState} from 'react';
+
+// import { MenuOutline } from "react-ionicons";
+
+
+const navLinks = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+  },
+  {
+    title: "Login",
+    path: "/login",
+  },
+];
 export default function Navigation(){
-    const navLinks = [
-      {
-        title: "Home",
-        path: "/",
-      },
-      {
-        title: "Blog",
-        path: "/blog",
-      },
-      {
-        title: "Contact",
-        path: "/contact",
-      },
-      {
-        title: "Login",
-        path: "/login",
-      }
-    ];
+    const [menuActive, setMenuActive] = useState(false);
+
     return (
-      <nav className="site-navigation">
-        <span>Xin chào Mũi Tẹt</span>
-        <ul>
-          {navLinks.map((link, index) => (
-            <li key={index}>
+      <nav
+        className={`site-navigation ${menuActive && "active"}`}
+        role="navigation"
+      >
+        <span className="menu-title">Xin chào Mũi Tẹt</span>
+        <div className="menu-content-container">
+          <ul>
+            {navLinks.map((link, index) => (
+              <li key={index}>
                 <Link to={link.path}>{link.title}</Link>
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
+          <div className="menu-avatar-container">
+            <img src="https://img.icons8.com/ultraviolet/40/000000/avatar.png" />
+            <span className="menu-avatar-name">Mẹ Tẹt</span>
+          </div>
+        </div>
+        {/* <MenuOutline
+          onClick={() => setMenuActive(!menuActive)}
+        /> */}
+        <img
+          className="menu-bar"
+          src="https://img.icons8.com/ios/24/000000/menu--v1.png"
+          onClick={() => setMenuActive(!menuActive)}
+        />
       </nav>
-    );
+    )
 }
