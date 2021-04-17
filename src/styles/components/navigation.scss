@@ -32,14 +32,15 @@
         align-items: center;
         margin-right: 30px;
 
-        .menu-avatar-container {
-            background-color: $color-primary;
+        .menu-avatar-image {
+            background-color: $color-white;
             border: 1px solid $color-border;
+            border-radius: 25px;
         }
 
         .menu-avatar-name {
             font-size: $size-text-small;
-            margin-left: 15px;
+            display: flex;
         }
     }
 
@@ -70,14 +71,14 @@
 @media screen and (max-width:$media-larger-tablet) {
     .site-navigation {
         .menu-content-container {
-           width: 300px;
+            width: 200px;
             height: calc(100% - 65px);
             background: white;
             position: fixed;
             top: 65px;
+            padding-left: 30px;
             transition: 300ms ease left;
             flex-direction: column;
-
 
             ul {
                 flex-direction: column;
@@ -90,19 +91,23 @@
                     display: flex;
                     align-items: center;
                 }
+
                 a {
                     padding: 20px 15px;
                     width: 100%;
                 }
             }
-             ul, li, .menu-avatar-container {
+
+            ul,
+            li,
+            .menu-avatar-container {
                 width: 100%;
             }
-            .menu-avatar-container{
-                align-self: flex-start;
-                margin-left: 30px;
-            }
 
+            .menu-avatar-container {
+                align-self: flex-start;
+                margin-bottom: 30px;
+            }
 
         }
 

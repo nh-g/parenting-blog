@@ -40,7 +40,10 @@ export default function Navigation(){
             ))}
           </ul>
           <div className="menu-avatar-container">
-            <img src="https://img.icons8.com/ultraviolet/40/000000/avatar.png" />
+            <img
+              className="menu-avatar-image"
+              src="https://img.icons8.com/ultraviolet/40/000000/avatar.png"
+            />
             <span className="menu-avatar-name">Mẹ Tẹt</span>
           </div>
         </div>
@@ -53,5 +56,5 @@ export default function Navigation(){
           onClick={() => setMenuActive(!menuActive)}
         />
       </nav>
-    )
+    );
 }
