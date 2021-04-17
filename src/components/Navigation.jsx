@@ -53,7 +53,7 @@ export default function Navigation(){
         <img
           className="menu-bar"
           src="https://img.icons8.com/ios/24/000000/menu--v1.png"
-          onClick={() => setMenuActive(!menuActive)}
+          onClick={(ev) => setMenuActive(!menuActive)}
         />
       </nav>
     );

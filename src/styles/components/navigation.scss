@@ -10,8 +10,8 @@
     top: 0;
 
     .menu-bar {
-        font-size: 20px;
-        width: 50px;
+        width: 40px;
+        height: 45px;
         align-items: center;
         cursor: pointer; //when mouse then become a pointer to indicate the link
         display: none;
@@ -83,7 +83,6 @@
             ul {
                 flex-direction: column;
                 justify-content: flex-start;
-                color: red;
 
                 li {
                     text-align: left;
@@ -117,6 +116,7 @@
 
         .menu-bar {
             display: flex;
+            margin: auto 30px auto auto;
         }
     }
 
