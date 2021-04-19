@@ -32,7 +32,9 @@ export default function Navigation(){
           <ul>
             {navLinks.map((link, index) => (
               <li key={index}>
-                <Link to={link.path}>{link.title}</Link>
+                <Link to={link.path}
+                onClick={() => setMenuActive(!menuActive)}>
+                {link.title}</Link>
               </li>
             ))}
           </ul>
@@ -47,7 +49,7 @@ export default function Navigation(){
         <img
           className="menu-bar"
           src="https://img.icons8.com/ios/24/000000/menu--v1.png"
-          onClick={(ev) => setMenuActive(!menuActive)}
+          onClick={() => setMenuActive(!menuActive)}
           />
       </nav>
     );
