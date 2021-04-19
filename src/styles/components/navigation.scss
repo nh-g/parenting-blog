@@ -68,15 +68,15 @@
     }
 }
 
-@media screen and (max-width:$media-larger-tablet) {
+@media screen and (max-width:900px) {
     .site-navigation {
         .menu-content-container {
-            width: 200px;
+            width: 300px;
             height: calc(100% - 65px);
             background: white;
             position: fixed;
             top: 65px;
-            padding-left: 30px;
+            left: -300px;
             transition: 300ms ease left;
             flex-direction: column;
 
@@ -111,7 +111,11 @@
         }
 
         &.active {
-            left: 0px;
+            .menu-content-container {
+                left: 0px;
+                padding-left: 30px;
+                padding-top: 20px;
+            }
         }
 
         .menu-bar {

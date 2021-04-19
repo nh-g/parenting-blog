@@ -44,14 +44,11 @@ export default function Navigation(){
             <span className="menu-avatar-name">Mẹ Tẹt</span>
           </div>
         </div>
-        {/* <MenuOutline
-          onClick={() => setMenuActive(!menuActive)}
-        /> */}
         <img
           className="menu-bar"
           src="https://img.icons8.com/ios/24/000000/menu--v1.png"
           onClick={(ev) => setMenuActive(!menuActive)}
-        />
+          />
       </nav>
     );
 }
