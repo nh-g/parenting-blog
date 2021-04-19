@@ -6,10 +6,15 @@ import Blog from './pages/Blog'
 
 import './styles/base/style.scss';
 function App() {
+  const user = {
+    lastName: 'Giang',
+    firstName: 'Coder'
+  }
+
   return (
     <Router>
       <div className="App">
-        <Navigation />
+        <Navigation user = {user}/>
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path ='/blog' component={Blog}/>
