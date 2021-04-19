@@ -68,15 +68,15 @@
     }
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:$media-larger-tablet) {
     .site-navigation {
         .menu-content-container {
-            width: 300px;
+            width: 250px;
             height: calc(100% - 65px);
             background: white;
             position: fixed;
             top: 65px;
-            left: -300px;
+            left: -250px;
             transition: 300ms ease left;
             flex-direction: column;
 
@@ -94,6 +94,10 @@
                 a {
                     padding: 20px 15px;
                     width: 100%;
+                    
+                    &:hover {
+                        color: $color-text-blue;
+                    }
                 }
             }
 
