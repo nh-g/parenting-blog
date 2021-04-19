@@ -19,7 +19,7 @@ const navLinks = [
     path: "/login",
   },
 ];
-export default function Navigation(){
+export default function Navigation({user}){
     const [menuActive, setMenuActive] = useState(false);
 
     return (
@@ -43,7 +43,9 @@ export default function Navigation(){
               className="menu-avatar-image"
               src="https://img.icons8.com/ultraviolet/40/000000/avatar.png"
             />
-            <span className="menu-avatar-name">Mẹ Tẹt</span>
+            <span className="menu-avatar-name">
+              {`${user.lastName} ${user.firstName}`}
+              </span>
           </div>
         </div>
         <img
