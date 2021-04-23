@@ -2,12 +2,15 @@ import React from 'react'
 import {categoryColors} from './categoryColors'
 
 export default function MasonryPost({ post, tagsOnTop }) {
-    const background_style = {
+    const background_image = {
       backgroundImage: `url("${require(`../../assets/images/${post.image}`).default}")`};
-  return (
+
+    const style = { ... background_image, ...post.style}
+  
+      return (
     <a
       className="masonry-post overlay"
-      style={background_style}
+      style={style}
       href={post.link}
     >
       <div className="image-text">
