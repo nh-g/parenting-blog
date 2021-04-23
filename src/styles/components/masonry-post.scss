@@ -1,0 +1,14 @@
+.masonry-post {
+    // the overlay inside is going to be an after element of the content pieces.
+    // then the overlay would be over the top of the image so it's position should be absolute.
+    display: block;
+    position: relative; // fit with "overlay"'s position which is "absolute"
+    border-radius: 5px;
+    overflow: hidden; //The overflow is clipped, and the rest of the content will be invisible
+    background-size: cover;
+    background-position: center center;
+    text-decoration: none;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
