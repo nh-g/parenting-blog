@@ -4,7 +4,7 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home'
 import Blog from './pages/Blog'
 
-import './styles/base/style.scss';
+import './styles/base/style.sass';
 function App() {
   const user = {
     lastName: 'Giang',
