@@ -15,7 +15,7 @@ const trendingConfig = {
 
 const featureConfig = {
     0: {
-        gridArea: '1 / 1 / span 1 / span 2',
+        gridArea: '1 / 1 / 2/ 3',
         height: '300px'
     },
     1: {
@@ -23,7 +23,7 @@ const featureConfig = {
     },
     3: {
         height: '630px',
-        marginLef: '30px',
+        marginLeft: '30px', // set gap between other post
         width: '630px'
     }
 }
@@ -41,10 +41,10 @@ export default function Home() {
     return (
       <section className="container home">
         <div className="row">
+          <h1>Featured Posts</h1>
           <section className="featured-posts-container">
-            <h1>Feature Posts</h1>
-            <PostMasonry  posts={featured} columns={2} tagsOnTop={true}/>
-            <MasonryPost post = {lastFeatured} tagsOnTop={true}/>
+            <PostMasonry posts={featured} columns={2} tagsOnTop={true} />
+            <MasonryPost post={lastFeatured} tagsOnTop={true} />
           </section>
           <h1>Trending Posts</h1>
           <PostMasonry posts={trending} columns={3} />
