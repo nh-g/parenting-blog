@@ -5,7 +5,8 @@ export default function MasonryPost({ post, tagsOnTop }) {
     const background_image = {
       backgroundImage: `url("${require(`../../assets/images/${post.image}`).default}")`};
 
-    const style = { ... background_image, ...post.style}
+    const windowWidth = window.innerWidth;
+    const style = windowWidth > 900 ? { ... background_image, ...post.style}: { ...background_image}
   
       return (
     <a
