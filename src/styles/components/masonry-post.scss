@@ -11,4 +11,47 @@
     margin: 0 auto;
     height: 100%;
     width: 100%;
+
+    .image-text{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box; //Width and height apply to all parts of the element: content, padding and borders:
+    }
+
+    .image-title, .image-date, .tags-container, .div {
+        float: left;
+        width: 100%;
+        z-index: 10;
+        font-weight: 300;
+    }
+
+    .image-title {
+        font-size: $size-text-medium;
+        color: $color-white;
+        margin-block-start: 0;
+        margin-block-end: 10px;
+        margin-top: 20px; //fix the margin between tag container and title
+    }
+
+    .image-date{
+        font-size: $size-text-small;
+        color: $color-text-light;
+    }
+
+    .tags-container{
+        font-size: $size-text-small;
+        font-weight: 500;
+        margin-bottom: 15px;
+        margin-left: -1px;
+        color: $color-white;
+
+        .tag {
+            border-radius: 5px;
+            padding: 4px 8px;
+            margin-right: 5px;
+        }
+    }
 }
