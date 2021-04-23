@@ -1,0 +1,13 @@
+.home {
+    
+    h1{
+        width: 100%;
+        color: $color-text-black;
+        font-size: $size-text-big;
+        font-weight: 400;
+    }
+
+    .featured-posts-container {
+        display: flex; 
+    }
+}
