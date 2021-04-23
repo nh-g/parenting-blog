@@ -19,7 +19,7 @@ const featureConfig = {
         height: '300px'
     },
     1: {
-        height: '300'
+        height: '300px'
     },
     3: {
         height: '630px',
