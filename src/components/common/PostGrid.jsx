@@ -33,30 +33,25 @@ export default function PostGrid({posts}) {
               <p className="author-text">
                 <span>
                   By:
-                  <Link to={`/authors/${post.author}`}>
-                    {post.author}
-                  </Link>
+                  <Link to={`/authors/${post.author}`}>{post.author}</Link>
                 </span>
-                <span>
-                  - {post.date}
-                </span>
+                <span>- {post.date}</span>
               </p>
-              <p className="description-text">
-                {post.description}
-              </p>
+              <p className="description-text">{post.description}</p>
               <Link to={post.link}>Read More...</Link>
             </div>
           ))}
-          <Pagination
-            simple
-            showSizeChanger
-            onShowSizeChange={setPageSize}
-            pageSize={pageSize}
-            total={posts.length}
-            defaultCurrent={current}
-            onChange={setCurrent}
-          />
         </section>
+        
+        <Pagination
+          simple
+          showSizeChanger
+          onShowSizeChange={setPageSize}
+          pageSize={pageSize}
+          total={posts.length}
+          defaultCurrent={current}
+          onChange={setCurrent}
+        />
       </section>
     );
 }
