@@ -32,7 +32,7 @@ const mergeStyles = (posts, config) => {
         post.style = config[index]
         post.author = 'N.H.G'
         post.description =
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis erat a purus ullamcorper, rhoncus sodales ligula auctor. Fusce convallis metus ut dolor ultrices, ut accumsan quam consectetur. Quisque at eleifend arcu. Fusce finibus imperdiet elit, vitae bibendum eros lobortis nec. Sed a libero porttitor, bibendum mi ac, vestibulum ipsum. Vestibulum non tincidunt nibh. Morbi posuere leo nisl, non aliquam erat finibus vitae. Maecenas pretium, mauris vel ultricies vestibulum, augue metus ultricies mi, a fermentum erat nisl accumsan nibh. Vivamus at rutrum mi. Etiam sem orci, bibendum ac tristique quis, auctor ut nunc. Integer et pharetra nisl. Aenean a finibus sapien. Nullam felis arcu, pulvinar eu interdum in, cursus ac lacus."
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis erat a purus ullamcorper, rhoncus sodales ligula auctor. Fusce convallis metus ut dolor ultrices, ut accumsan quam consectetur."
     })
 }
 mergeStyles(trending, trendingConfig)
