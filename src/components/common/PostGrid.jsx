@@ -2,6 +2,8 @@ import React, {useState, useMemo} from 'react'
 import {Link} from 'react-router-dom'
 import { Pagination } from "antd";
 
+import {TagRow} from './'
+
 export default function PostGrid({posts}) {
     const [pageSize, setPageSize] = useState(9)
     const [current, setCurrent] = useState(1)
@@ -23,6 +25,21 @@ export default function PostGrid({posts}) {
                         <img src={require(`../../assets/images/${post.image}`).default} alt={post.image}/>
                     </Link>
                 </figure>
+                <TagRow tags = {post.categories}/>
+                <h2>{post.title}</h2>
+                <span className='author-text'>
+                  By:
+                  <Link to={`/authors/${post.author}`}>
+                    {post.author}
+                  </Link>
+                </span>
+                <span>{post.date}</span>
+                <p className="description-text">
+                  {post.description}
+                </p>
+                <Link to={post.link}>
+                  Read More...
+                </Link>
             </div>
             )}
           <Pagination
