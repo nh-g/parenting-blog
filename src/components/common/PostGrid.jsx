@@ -1,5 +1,5 @@
 import React, {useState, useMemo} from 'react'
-
+import {Link} from 'react-router-dom'
 import { Pagination } from "antd";
 
 export default function PostGrid({posts}) {
@@ -16,6 +16,15 @@ export default function PostGrid({posts}) {
     return (
       <section className="grid-pagination-container">
         <section className="post-grid container">
+            {paginatedPosts.map((post,index) =>
+            <div className="post-container">
+                <figure>
+                    <Link to={post.link}>
+                        <img src={require(`../../assets/images/${post.image}`).default} alt={post.image}/>
+                    </Link>
+                </figure>
+            </div>
+            )}
           <Pagination
             simple
             showSizeChanger
