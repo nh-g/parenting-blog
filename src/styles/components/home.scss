@@ -1,21 +1,28 @@
 .home {
-    margin-top: 5em;
+    // margin-top: 5em;
+    padding: 2em 0;
 
     h1 {
         width: 100%;
         color: $color-text-black;
         font-size: $size-text-big;
         font-weight: 400;
+        padding: 1.5em 0;
     }
 
     .featured-posts-container {
         display: flex;
+    }
+
+    .background-white {
+        background: $color-white;
     }
 }
 
 @media screen and (max-width: $media-larger-desktop) {
     .home {
         h1 {
+            margin: 5;
             margin-block-start: 1.5em;
             margin-block-end: 1.5em;
         }
