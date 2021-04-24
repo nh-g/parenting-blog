@@ -21,7 +21,7 @@
         box-sizing: border-box; //Width and height apply to all parts of the element: content, padding and borders:
     }
 
-    .image-title, .image-date, .tags-container, .div {
+    .image-title, .image-date, .tags-container, div {
         float: left;
         width: 100%;
         z-index: 10;
