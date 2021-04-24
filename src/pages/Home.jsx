@@ -39,7 +39,7 @@ mergeStyles(trending, trendingConfig)
 mergeStyles(featured, featureConfig)
 
 const lastFeatured = featured.pop()
-const recentPosts = {...trending, ...featured, ...featured}
+const recentPosts = [...trending, ...featured, ...featured]
 export default function Home() {
     return (
       <main className="home">
