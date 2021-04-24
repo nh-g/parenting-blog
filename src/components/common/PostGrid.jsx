@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from 'react'
+import React, {useState, useMemo, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import { Pagination } from "antd";
 
@@ -14,6 +14,15 @@ export default function PostGrid({posts}) {
 
       return posts.slice(firstIndex, lastIndex);
     }, [current, pageSize]);
+
+    useEffect(() => {
+      window.scroll({
+        top:500,
+        left:0,
+        behavior: 'smooth'
+      })
+    }, [current, pageSize]);
+
     
     return (
       <section className="grid-pagination-container">
@@ -42,7 +51,7 @@ export default function PostGrid({posts}) {
             </div>
           ))}
         </section>
-        
+
         <Pagination
           simple
           showSizeChanger
